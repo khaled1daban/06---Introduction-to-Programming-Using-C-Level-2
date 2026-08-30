@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+void swapusingref(int &n1 , int &n2)
+{
+    int swap;
+    swap = n1;
+    n1 = n2;
+    n2 = swap;
+}
+void swapusingpointer(int *m1 , int *m2) 
+{
+    int swap = *m1;
+    *m1 = *m2;
+    *m2 = swap;
+}
+int main()
+{
+    int a = 10, b = 20;
+    cout << "\n\nBefore swap using ref: " << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    cout << "After swap using ref: " << endl;
+    swapusingref(a, b);
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+
+
+
+    
+    cout << "\n\nBefore swap using pointer: " << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    cout << "After swap using pointer: " << endl;
+    swapusingpointer(&a, &b);
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+
+
+
+    return 0;
+}
