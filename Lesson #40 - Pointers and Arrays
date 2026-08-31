@@ -34,7 +34,7 @@ void pointerstoarrforlop()
     cout << "\n\n";
     for (int i = 0; i < 5; i++)
     {
-        cout << "address arr[" << i << "] : " << *(p + i) << endl;
+        cout << "value arr[" << i << "] : " << *(p + i) << endl;
     }
 
 }
