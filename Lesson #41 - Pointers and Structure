@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+struct stemplyee 
+{
+    string name;
+    float selary;
+};
+void PointersandStructure() 
+{
+    stemplyee emplyee, * prt;
+
+    emplyee.name = "khaled.daban";
+    emplyee.selary = 500;
+
+    cout << "name is: " << emplyee.name << endl;
+    cout << "selary is: " << emplyee.name << endl;
+
+    prt = &emplyee;
+
+    cout << "\n\nusing pointers: " << endl;
+
+    cout << "name is: " << prt->name << endl;
+    cout << "selary is: " <<prt->selary << endl;
+
+}
+
+
+int main()
+{
+    PointersandStructure();
+    return 0;
+}
+
