@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    float f = 10.5;
+    int a = 200;
+    void* ptr;
+
+    ptr = &f;
+   
+
+    cout << "poniters address f: " << ptr << endl;
+    cout << "poniters vule f: " << *(static_cast<float*>(ptr)) << endl;
+
+    ptr = &a;
+
+
+    cout << "\n\nponiters address a: " << ptr << endl;
+    cout << "poniters vule a: " << *(static_cast<int*>(ptr)) << endl;
+
+    return 0;
+}
