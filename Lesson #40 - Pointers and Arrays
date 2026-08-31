@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+void arrtopointers() 
+{
+    int arr[5] = { 11,22,33,44,55 };
+
+    int* p;
+    p = arr;
+
+    cout << "address arr[0]: " << p << endl;
+    cout << "address arr[1]: " << p + 1 << endl;
+    cout << "address arr[2]: " << p + 2 << endl;
+    cout << "address arr[3]: " << p + 3 << endl;
+    cout << "address arr[4]: " << p + 4 << endl << endl;
+
+    cout << "value arr[0]: " << *(p) << endl;
+    cout << "value arr[1]: " << *(p + 1) << endl;
+    cout << "value arr[2]: " << *(p + 2) << endl;
+    cout << "value arr[3]: " << *(p + 3) << endl;
+    cout << "value arr[4]: " << *(p + 4) << endl << endl << endl;
+
+}
+void pointerstoarrforlop() 
+{
+    int arr1[5] = { 11,22,33,44,55 };
+    int* p;
+    p = arr1;
+
+    for (int i =0 ;i < 5 ; i++) 
+    {
+        cout << "address arr[" << i  << "] : " << p << endl;
+    }
+    cout << "\n\n";
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "address arr[" << i << "] : " << *(p + i) << endl;
+    }
+
+}
+
+int main()
+{
+    arrtopointers();
+    pointerstoarrforlop();
+
+    return 0;
+}
