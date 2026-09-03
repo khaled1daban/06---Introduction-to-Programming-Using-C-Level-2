@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+void printiterator() 
+{
+    vector <int>vnum{ 11,22,33,44,55,66 };
+
+    vector <int> ::iterator ittor;
+
+    for (ittor = vnum.begin() ; ittor != vnum.end() ;ittor++) 
+    {
+        cout << *ittor << " ";
+    }
+
+    cout << "\n\n";
+}
+int main()
+{
+    printiterator();
+
+    return 0;
+}
