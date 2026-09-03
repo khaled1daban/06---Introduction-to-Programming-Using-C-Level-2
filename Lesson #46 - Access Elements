@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+void printvector() 
+{
+    vector <int> vnum{ 11,22,33,44,55,66 };
+    cout << "using num[i]:\n";
+    cout << "Element at Index 0: " << vnum[0] << endl;
+    cout << "Element at Index 1: " << vnum[1] << endl;
+    cout << "Element at Index 4: " << vnum[4] << endl;
+    cout << "Element at Index 5: " << vnum[5] << endl;
+
+    cout << "\n\nusing num.ate():\n";
+    cout << "Element at Index 0: " << vnum.at(0) << endl;
+    cout << "Element at Index 1: " << vnum.at(1) << endl;
+    cout << "Element at Index 4: " << vnum.at(4) << endl;
+    cout << "Element at Index 5: " << vnum.at(5) << endl;
+
+
+}
+int main()
+{
+    printvector();
+    return 0;
+}
