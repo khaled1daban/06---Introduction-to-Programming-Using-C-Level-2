@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+using namespace std;
+void somecctype() 
+{
+    cout << "" << endl;
+    char s = 'a';
+    char x = 'A';
+
+    s = toupper(s);
+    x = tolower(x);
+    cout << "converting a to A: " << s << endl;
+    cout << "converting A to a: " << s << endl;
+
+    // Digits (A to Z)
+    // returns zero if not, and non zero of yes
+    cout << "isupper('A') " << isupper('A') << endl;
+
+    // lower case (a to z)
+   // returns zero if not, and non zero of yes
+    cout << "islower('a') " << islower('a') << endl;
+
+    // Digits (A to Z)
+   // returns zero if not, and non zero of yes
+    cout << "isdigit('9') " << isdigit('9') << endl;
+
+    // punctuation characters are !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    // returns zero if not, and non zero o
+    cout << "ispunct(';') " << ispunct(';') << endl;
+}
+void somecctype2() 
+{
+    cout << "\n\n" << endl;
+    char s ;
+    char x ;
+    s = toupper('a');
+    x = tolower('A');
+
+    cout << "converting a to A: " << s << endl;
+    cout << "converting A to a: " << s << endl;
+
+    cout << "isupper('A') " << isupper('a') << endl;
+
+    cout << "islower('a') " << islower('a') << endl;
+
+    cout << "isdigit('9') " << isdigit('9') << endl;
+    
+    cout << "ispunct(';') " << ispunct(';') << endl;
+}
+int main()
+{
+    somecctype();
+    somecctype2();
+
+    return 0;
+}
