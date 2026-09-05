@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+void stringopject() 
+{
+    string s1 = "khaled mohammed daban , abo arab , Programming student in programmingadvices.";
+    cout << s1.length() << endl;
+    cout << s1.at(5) << endl;
+
+    s1.append(" in https://programmingadvices.com/");
+    cout << s1 << endl;
+
+    s1.insert(6, " arab baba");
+    cout << s1 << endl;
+
+    cout << s1.substr(17, 8) << endl;
+
+    s1.push_back(' a');
+    cout << s1 << endl;
+
+    s1.pop_back();
+    s1.pop_back();
+    cout << s1 << endl << endl;
+
+    cout << s1.find("arab") << endl;
+
+    cout << s1.find("Arab") << endl;
+    if (s1.find("Arab")== s1.npos)
+    {
+        cout << "Not found " << endl << endl;
+    }
+
+    s1.clear();
+    cout << s1 << endl << endl;
+
+}
+int main()
+{
+    stringopject();
+
+    return 0;
+
+}
