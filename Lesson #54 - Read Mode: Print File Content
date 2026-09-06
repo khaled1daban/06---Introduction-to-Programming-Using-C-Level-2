@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+void printfile(string filename) 
+{
+    fstream myfile;
+
+    myfile.open(filename, ios::in);
+
+    if (myfile.is_open()) 
+    {
+        string line;
+        while (getline(myfile,line)) 
+        {
+            cout << line << endl;
+        }
+        myfile.close();
+
+
+    }
+
+}
+int main()
+{
+    printfile("myfile");
+    return 0;
+}
