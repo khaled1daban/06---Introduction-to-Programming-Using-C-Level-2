@@ -1,0 +1,25 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+int main()
+{
+    fstream myfaile;
+
+    myfaile.open("myfaile.txt", ios::out | ios::app);
+
+    if (myfaile.is_open()) 
+    {
+        myfaile << "khaled \n";
+        myfaile << "abo arab \n";
+        myfaile << "mohammad \n";
+        myfaile << "daban \n";
+        myfaile << "ameer\n";
+        myfaile << "ahmed \n";
+
+        myfaile.close();
+    }
+
+
+    return 0;
+}
