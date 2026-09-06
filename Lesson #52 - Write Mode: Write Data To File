@@ -1,0 +1,28 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+int main()
+{
+
+    fstream myfaile;
+
+    myfaile.open("myfaile.txt", ios::out);
+
+
+    if (myfaile.is_open()) 
+    {
+        myfaile << "hi , this is fars line\n";
+        myfaile << "hi , this is scand line\n";
+        myfaile << "hi , this is last line\n";
+
+        myfaile.close();
+    }
+
+   
+
+
+
+    return 0;
+
+}
