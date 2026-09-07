@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+void SaveVectortoFile(string filename , vector <string> vfilecontent) 
+{
+    fstream myfile;
+
+    myfile.open(filename, ios::out);
+    if (myfile.is_open()) 
+    {
+        for (string &line : vfilecontent)
+        {
+            if (line != "")
+                myfile << line << endl;
+        }
+
+        myfile.close();
+    }
+
+
+
+
+}
+int main()
+{
+
+    vector <string> vfilecontent{ "khaled","abo arab","ahmed","asma","sara" };
+
+    SaveVectortoFile("myfile.txt", vfilecontent);
+
+
+    return 0;
+}
