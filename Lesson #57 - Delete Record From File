@@ -1,0 +1,117 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+void raeitdata(string filename) 
+{
+	fstream myfile;
+	myfile.open(filename, ios::out | ios::app);
+	if (myfile.is_open()) 
+	{
+		myfile << "Khaled" << endl;
+		myfile << "Abu Arab" << endl;
+		myfile << "Mohammed" << endl;
+		myfile << "Ahmed" << endl;
+		myfile << "Omar" << endl;
+		myfile << "Yazan" << endl;
+		myfile << "ali" << endl;
+		myfile << "Muath" << endl;
+		myfile << "ali" << endl;
+		myfile << "ali" << endl;
+
+		myfile.close();
+	}
+
+
+}
+
+void LoadDataFromFileToVector(string filename , vector <string> &vfiledata) 
+{
+	fstream myfile;
+	myfile.open(filename, ios::in);
+
+	if (myfile.is_open())
+	{
+		string line;
+		while (getline(myfile,line))
+		{
+			vfiledata.push_back(line);
+		}
+		myfile.close();
+	}
+
+}
+void SaveVectorToFile(string filename, vector <string> vfiledata)
+{
+	fstream myfile;
+	myfile.open(filename, ios::out);
+
+	if (myfile.is_open())
+	{
+		for (string &line : vfiledata)
+		{
+			if (line != "")
+				myfile << line << endl;
+		}
+		myfile.close();
+	}
+}
+void DeleteRecordFromFile(string filename,  string Record)
+{
+	vector <string> vfiledata;
+	
+	LoadDataFromFileToVector(filename, vfiledata);
+	for (string &line : vfiledata)
+	{
+		if (line == Record)
+		{
+			line = "";
+		}
+
+	}
+	SaveVectorToFile(filename, vfiledata);
+	
+
+
+}
+void PrintFileContent(string filename)
+{
+	fstream myfile;
+	myfile.open(filename, ios::in);
+
+	if (myfile.is_open()) 
+	{
+		string line;
+
+		while (getline(myfile,line)) 
+		{
+			cout << line << endl;
+		}
+		
+		myfile.close();
+	}
+
+
+}
+int main()
+{
+	raeitdata("myfile.txt");
+	cout << "\n\n\n";
+
+	vector <string > vfiledata;
+
+	cout << "File Content Before Delete. " << endl;
+	PrintFileContent("myfile.txt");
+
+	DeleteRecordFromFile("myfile.txt", "ali");
+	cout << "\n\n\n";
+
+	cout << "File Content After Delete. " << endl;
+
+	PrintFileContent("myfile.txt");
+
+
+	return 0;
+}
